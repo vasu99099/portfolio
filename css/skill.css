@@ -1,0 +1,83 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+#skills {
+    padding: 2em;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.skill-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.skill-card {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    padding: 1.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card .icon {
+    font-size: 3em;
+    color: rgb(255, 189, 57);
+    transition: color 0.3s ease;
+}
+
+.skill-card h3 {
+    font-size: 1.25em;
+    color: white;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.skill-card h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 189, 57);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.skill-card:hover h3::after {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .skill-card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .skill-card {
+        width: calc(50% - 2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        width: calc(100% - 2em);
+    }
+}
